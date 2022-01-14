@@ -25,6 +25,7 @@
     //     cost: 150,
     //     timestamp: "10-06-26 02:31:29,573",
     // },
+
   var points =[   {
         startPoint: {
             longtitude: 38.763611,
@@ -88,6 +89,10 @@
 const getRandom = (min ,max) => {
     return (Math.floor(Math.random() * (max - min) + min))/1000000
 }
+function randomDate(start, end) {
+    return new Date(start.getTime() + Math.random() * (end.getTime() - start.getTime()));
+}
+
 
 const getPoints = ()=>{
     var p = []
@@ -103,7 +108,7 @@ const getPoints = ()=>{
                      longtitude: getRandom(38650742 , 38854456)
                 },
                 cost: Math.floor(Math.random() * (700 - 50) + 50),
-                timestamp: 1641282525,
+                timestamp: randomDate(new Date(2012, 0, 1), new Date()),
             }
         )
     }

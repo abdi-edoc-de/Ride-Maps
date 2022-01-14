@@ -11,6 +11,7 @@ import { OverAllHeatMap } from './FMaps/OverAllHeatMap'
 import { ByHotel } from './FMaps/ByHotel'
 import { HotelHeatMap } from './FMaps/HotelsHeatMap'
 import { ByTime } from './FMaps/ByTime'
+import { TimeHeatMap } from './FMaps/TimeHeatMap'
 
 const Maps = () => {
     return (
@@ -25,7 +26,7 @@ const Maps = () => {
                         <Route path = "/hotels" component={ ByHotel} />
                         <Route path = "/hotelheatmap" component={HotelHeatMap}/>
                         <Route path = "/time" component={ByTime}/>
-
+                        <Route path = "/timeheat" component={TimeHeatMap}/>
                     </Switch>
             </Grid>
             <Grid container sx={{ mt: 5 }} xs={12} spacing={4}>
@@ -49,7 +50,7 @@ const Maps = () => {
                 <ButtonGroup size="large" variant="contained" color="secondary">
                         <Button startIcon={<AddLocationAltIcon />}>
                             <Link to="/hotels"  style={{ textDecoration: 'none' }}>
-                                byhotels map
+                                hotels map
                             </Link>
                         </Button>
 
@@ -68,8 +69,8 @@ const Maps = () => {
                         </Button>
 
                         <Button>
-                            <Link to="#"  style={{ textDecoration: 'none' }}>
-                                Overall Heatmap
+                            <Link to="/timeheat"  style={{ textDecoration: 'none' }}>
+                                Time Heatmap
                             </Link>
                         </Button>
                     </ButtonGroup>

@@ -29,7 +29,7 @@ export const TimeHeatMap = () => {
         container: mapRef.current,
         map: map,
         center: [38.763611, 9.005401],
-        zoom: 15
+        zoom: 12
       });
       
       // const renderer = {
@@ -66,7 +66,7 @@ export const TimeHeatMap = () => {
       // });
       // map.add(graphicsLayer);  
 
-      var layer = createLayerForPonit(addMulPoints(fetchPointsTime(), Graphic),FeatureLayer)
+      var layer = createLayer(addMulPoints(fetchPointsTime(), Graphic),FeatureLayer)
       map.add(layer)
       view.ui.add(basemapGallery, {
         position: "top-right"

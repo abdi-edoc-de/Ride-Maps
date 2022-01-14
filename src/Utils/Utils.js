@@ -111,15 +111,56 @@ function getDifferenceInMinutes(date1, date2) {
   export const fetchPointsTime = () =>{
     console.log(points)
     var ret =  points.filter(p => {
-      var val = getDifferenceInMinutes(new Date() , new Date(p.timestamp)) 
+      var val = getDifferenceInMinutes(new Date() , p.timestamp) 
       console.log(val)
     return val < 20})
     return ret
   }
+  export const getDayes = () =>{
+    var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+     var values =  [0,0,0,0,0,0,0]
+    let data = new Map()
+    days.forEach((e,ind) =>
+     {
+      data.set(e, ind)
+    })
+    points.forEach(point =>{
+      var date = point.timestamp
+      console.log(date.getHours())
+      values[data.get(days[date.getDay()])] ++;
+    })
+    return [values , days]
+  }
 
+  export const getTime = () => {
+    var [labesls , data] = [[] , []]
+    for(let i = 0 ; i < 24; i++){
+        labesls.push(i)
+        data.push(0)
+    }
+    points.forEach(el => {
+      var h = el.timestamp.getHours()
+      data[h]++
+    })
+    return [labesls , data]
+  }
+
+export const getDaysCost = () => {
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+     var values =  [0,0,0,0,0,0,0]
+    let data = new Map()
+    days.forEach((e,ind) =>
+     {
+      data.set(e, ind)
+    })
+    points.forEach(point =>{
+      var date = point.timestamp
+      console.log(date.getHours())
+      values[data.get(days[date.getDay()])] += point.cost;
+    })
+    return [values , days]
+}
 export const createLayerForPonit = (graphics,FeatureLayer) =>{
-    var d = new Date()
-    console.log(d.getDay() )
     const simpleMarkerSymbol = {
         type: "simple-marker",
         color: [226, 119, 0],  // Orange
@@ -163,5 +204,7 @@ export const createLayerForPonit = (graphics,FeatureLayer) =>{
       });
       return map
   }
+
+
 
 
