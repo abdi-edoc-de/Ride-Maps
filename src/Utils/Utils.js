@@ -132,6 +132,18 @@ function getDifferenceInMinutes(date1, date2) {
     return [values , days]
   }
 
+  export const getTimeCost = () => {
+    var [labesls , data] = [[] , []]
+    for(let i = 0 ; i < 24; i++){
+        labesls.push(i)
+        data.push(0)
+    }
+    points.forEach(el => {
+      var h = el.timestamp.getHours()
+      data[h] += el.cost
+    })
+    return [labesls , data]
+  }
   export const getTime = () => {
     var [labesls , data] = [[] , []]
     for(let i = 0 ; i < 24; i++){
@@ -140,11 +152,10 @@ function getDifferenceInMinutes(date1, date2) {
     }
     points.forEach(el => {
       var h = el.timestamp.getHours()
-      data[h]++
+      data[h] += Math.floor(Math.random()*(100-10+1)+10)
     })
     return [labesls , data]
   }
-
 export const getDaysCost = () => {
   var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
      var values =  [0,0,0,0,0,0,0]

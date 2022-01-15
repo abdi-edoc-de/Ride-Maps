@@ -21,6 +21,7 @@ import Grid from '@mui/material/Grid'
 import MapIcon from '@mui/icons-material/Map';
 import Maps from './Maps';
 import Chart from './Chart';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
 import {BrowserRouter as Router,Switch, Route, Link} from 'react-router-dom'
 const drawerWidth = 240;
 
@@ -121,7 +122,7 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-            Mini variant drawer
+           GIS for RIDE
           </Typography>
         </Toolbar>
       </AppBar>

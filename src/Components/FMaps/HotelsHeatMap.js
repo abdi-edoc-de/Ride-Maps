@@ -22,7 +22,7 @@ export const HotelHeatMap = () => {
       esriConfig.apiKey = "AAPK79e2c16a056f4275bb85e1585ff36a2bza9wGJmD3_1qBs-9gzDdUiWpRMW1T-x6ZQA23Ey57-VDAZwmj5Czoo4eShY7wt5U"
       var url = "https://raw.githubusercontent.com/tewodros18/arcgis/main/abdi.geojson"
       const map = new ArcGISMap({
-        basemap: "hybrid"
+        basemap: "streets-vector"
       });
       // load the map view at the ref's DOM node
       const view = new MapView({
@@ -30,7 +30,7 @@ export const HotelHeatMap = () => {
         map: map,
         center: [-76.98997945900216,
             38.888373396148666],
-        zoom: 13
+        zoom: 12
       });
       
      

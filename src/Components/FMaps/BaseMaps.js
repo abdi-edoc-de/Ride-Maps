@@ -22,14 +22,14 @@ export const BaseMaps = () => {
       esriConfig.apiKey = "AAPK79e2c16a056f4275bb85e1585ff36a2bza9wGJmD3_1qBs-9gzDdUiWpRMW1T-x6ZQA23Ey57-VDAZwmj5Czoo4eShY7wt5U"
       
       const map = new ArcGISMap({
-        basemap: "hybrid"
+        basemap: "streets-vector"
       });
       // load the map view at the ref's DOM node
       const view = new MapView({
         container: mapRef.current,
         map: map,
         center: [38.763611, 9.005401],
-        zoom: 15
+        zoom: 12
       });
       
       // const renderer = {
