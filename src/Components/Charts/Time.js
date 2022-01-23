@@ -66,12 +66,12 @@ const options = {
       curve: 'smooth'
     },
     xaxis: {
-      type: 'datetime',
+      type: 'number',
       categories:labels
     },
     tooltip: {
       x: {
-        format: 'dd/MM/yy HH:mm'
+        // format: 'dd/MM/yy HH:mm'
       },
     },
   }

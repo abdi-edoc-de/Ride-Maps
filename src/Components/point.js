@@ -96,16 +96,21 @@ function randomDate(start, end) {
 
 const getPoints = ()=>{
     var p = []
-    for (let i=0; i < 100 ; i++){
+    for (let i=0; i < 40 ; i++){
+    console.log(getRandom(9003401 ,  9107401), getRandom(38650742 , 38854456))
         p.push(
             {
+                // 9.0080911442861, 38.71434250228439
+                // 9.019848795970482, 38.8016434320629
+                // 8.95550050808905, 38.73207738956802
+                // 9.054726977967698, 38.737920978140394
                 startPoint: {
-                    latitude: getRandom(8884441 , 9085311),
-                     longtitude: getRandom(38650742 , 38854456)
+                    latitude: getRandom(8955500 ,  9054726),
+                     longtitude: getRandom( 38714342 , 38.801643)
                 },
                 endPoint: {
-                    latitude: getRandom(8884441 , 9085311),
-                     longtitude: getRandom(38650742 , 38854456)
+                    latitude: getRandom(9003401 ,  9107401),
+                     longtitude: getRandom(38764611 , 38793611)
                 },
                 cost: Math.floor(Math.random() * (700 - 50) + 50),
                 timestamp: randomDate(new Date(2012, 0, 1), new Date()),

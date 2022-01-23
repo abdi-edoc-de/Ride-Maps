@@ -122,7 +122,7 @@ export default function MiniDrawer() {
             <MenuIcon />
           </IconButton>
           <Typography variant="h6" noWrap component="div">
-           GIS for RIDE
+           GIS Assignment
           </Typography>
         </Toolbar>
       </AppBar>
@@ -142,14 +142,14 @@ export default function MiniDrawer() {
             </ListItem>
             </Link>
 
-        <Link to="charts"  style={{ textDecoration: 'none' }}>
+        {/* <Link to="charts"  style={{ textDecoration: 'none' }}>
           <ListItem button >
               <ListItemIcon>
                  <StackedLineChartIcon />
               </ListItemIcon>
               <ListItemText primary="Charts" />
             </ListItem>
-            </Link>
+            </Link> */}
         </List>
   
       </Drawer>

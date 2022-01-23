@@ -32,7 +32,7 @@ const Maps = () => {
             </Grid>
             <Grid container sx={{ mt: 5 }} xs={12} spacing={4}>
 
-                <Grid item xl={4} md={6} xs={12}>
+                <Grid item xl={12} md={12} xs={12}>
 
                     <ButtonGroup size="large" variant="contained" color="secondary" style={{ textDecoration: 'none' }}>
                         <Link className="Nav_menu" to="/" style={{ textDecoration: 'none' }} >
@@ -49,7 +49,7 @@ const Maps = () => {
 
                     </ButtonGroup>
                 </Grid>
-                <Grid item xl={4} md={6} xs={12}>
+                {/* <Grid item xl={4} md={6} xs={12}>
                     <ButtonGroup size="large" variant="contained" color="secondary" style={{ textDecoration: 'none' }}>
                         <Link to="/hotels" style={{ textDecoration: 'none' }}>
                             <Button style={{ color: '#FFFFFF', textDecoration: 'none' }} startIcon={<HotelIcon />}>
@@ -82,7 +82,7 @@ const Maps = () => {
                         </Link>
 
                     </ButtonGroup>
-                </Grid>
+                </Grid> */}
                 {/* <Grid item xl={3} md={6} xs={12}>
                     <ButtonGroup disableElevation variant="contained">
                         <Button startIcon={<AddLocationAltIcon />}>Overall map</Button>
